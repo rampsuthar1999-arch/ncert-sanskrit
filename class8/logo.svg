@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="38%" r="45%"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"/><stop offset="1" stop-color="#ffd27a" stop-opacity="0"/></radialGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3c4"/><stop offset=".45" stop-color="#ffb52e"/><stop offset="1" stop-color="#e2571b"/></linearGradient>
+    <linearGradient id="lamp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9a23b"/><stop offset="1" stop-color="#b8661c"/></linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#8c1c13"/>
+  <circle cx="256" cy="200" r="190" fill="url(#glow)"/>
+  <!-- open book -->
+  <path d="M256 352 C214 324 160 314 92 318 L92 412 C160 408 214 418 256 446 Z" fill="#fbf4e6"/>
+  <path d="M256 352 C298 324 352 314 420 318 L420 412 C352 408 298 418 256 446 Z" fill="#f3e6cc"/>
+  <path d="M256 352 L256 446" stroke="#8c1c13" stroke-width="5"/>
+  <g stroke="#c9a77a" stroke-width="6" stroke-linecap="round" fill="none" opacity=".8">
+    <path d="M118 346 C160 343 196 349 228 364"/><path d="M118 372 C160 369 196 375 228 390"/>
+    <path d="M394 346 C352 343 316 349 284 364"/><path d="M394 372 C352 369 316 375 284 390"/>
+  </g>
+  <!-- diya -->
+  <path d="M166 286 C176 334 220 352 256 352 C292 352 336 334 346 286 C306 300 206 300 166 286 Z" fill="url(#lamp)"/>
+  <path d="M166 286 C206 300 306 300 346 286" stroke="#7a3a10" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M330 290 C350 280 368 278 382 286 C368 292 352 298 334 302 Z" fill="url(#lamp)"/>
+  <!-- flame -->
+  <path d="M256 128 C226 176 222 214 232 240 C240 262 272 262 280 240 C290 214 286 176 256 128 Z" fill="url(#flame)"/>
+  <path d="M256 186 C244 208 244 226 250 238 C254 246 260 246 264 238 C270 226 268 208 256 186 Z" fill="#fff8de"/>
+  <rect x="252" y="252" width="8" height="34" rx="4" fill="#5a2a0c"/>
+</svg>

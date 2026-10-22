@@ -263,3 +263,12 @@ table.gt th small{display:block;font-weight:400;color:var(--muted);font-size:11.
 .shelf{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 auto 18px;padding:0}
 .shelf span{color:var(--muted,#7a6a55);font-size:14px}
 .shelf .btn{padding:4px 14px;text-decoration:none}
+
+/* सुरभारती brand bar */
+.brand{display:flex;align-items:center;gap:10px;margin:0 0 18px;color:var(--ink);text-decoration:none}
+.brand img{width:36px;height:36px;border-radius:9px;display:block}
+.brand b{font-family:'Tiro Devanagari Sanskrit',serif;font-weight:400;font-size:24px;color:#8c1c13}
+:root[data-theme="dark"] .brand b{color:#f0b37e}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand b{color:#f0b37e}}
+.brand small{color:var(--muted);font-size:13px}
+@media (max-width:520px){.brand small{display:none}}

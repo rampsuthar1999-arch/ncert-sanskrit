@@ -1,6 +1,6 @@
 // Offline cache: page images are cached as they are viewed; app shell is network-first.
-const V='deepakamV-v1';
-const SHELL=['./','index.html','css/style.css','js/translit.js','js/app.js','js/study.js','book.json','search.json','study/grammar.json','manifest.webmanifest','icon-192.png'];
+const V='deepakamV-v2';
+const SHELL=['./','index.html','css/style.css','js/translit.js','js/app.js','js/study.js','book.json','search.json','study/grammar.json','manifest.webmanifest','icon-192.png','logo.svg'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()));});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V&&k.startsWith(V.replace(/\d+$/,''))).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener('fetch',e=>{

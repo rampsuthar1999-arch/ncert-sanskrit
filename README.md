@@ -1,4 +1,12 @@
-# NCERT Sanskrit: दीपकम् (कक्षा 6–8), शारदा (कक्षा 9), शेमुषी (कक्षा 10) (GitHub Pages reader + self-study layer)
+# सुरभारती · Surabhāratī
+
+![सुरभारती](og-cover.jpg)
+
+**NCERT Sanskrit, page by page** — the NCERT Sanskrit textbooks for Classes 6–10 and the Class 9–10 grammar book as a reading and self-study web app: दीपकम् (कक्षा 6–8), शारदा (कक्षा 9), शेमुषी (कक्षा 10) and व्याकरणवीथिः.
+
+*सुरभारती*, "the speech of the gods", is a classical name for Sanskrit. The logo is a lit दीप on an open book.
+
+**Live site:** https://rampsuthar1999-arch.github.io/ncert-sanskrit/
 
 A static web app for the NCERT Class 6 Sanskrit textbook **दीपकम्**. Every page is shown exactly as printed (same images, same layout). On top of the pages sits an invisible, tappable study layer for adult self-learners.
 
