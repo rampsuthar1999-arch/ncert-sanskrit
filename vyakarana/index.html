@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="sa">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>व्याकरणवीथिः – संस्कृत व्याकरण</title>
+<meta name="description" content="व्याकरणवीथिः – कक्षा 9 एवं 10 के लिए संस्कृत व्याकरण (NCERT). Read the Class 9 Sanskrit textbook page by page, with word analysis, translations, exercises and spaced review for self-study.">
+<meta name="theme-color" content="#8c1c13">
+<meta property="og:title" content="व्याकरणवीथिः – कक्षा 9 एवं 10 के लिए संस्कृत व्याकरण">
+<meta property="og:image" content="pages/ps/01.webp">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Tiro+Devanagari+Sanskrit&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HOME ============ -->
+<main id="home">
+  <section class="hero">
+    <img id="coverImg" src="pages/ps/01.webp" alt="व्याकरणवीथिः – पुस्तकस्य आवरणपृष्ठम्" width="1400" height="2122">
+    <div>
+      <h1 class="sa">व्याकरणवीथिः</h1>
+      <p class="sub sa">कक्षा 9 एवं 10 के लिए संस्कृत व्याकरण</p>
+      <p>NCERT's Sanskrit grammar for Classes 9 and 10, page for page as printed: वर्ण, सन्धि, शब्दरूप, धातुरूप, उपसर्ग, अव्यय, प्रत्यय, समास, कारक, वाच्य and रचना, with the full शब्दरूप and धातुरूप tables. Search it, highlight and annotate any page, and turn any table or rule into a flashcard with the ✎ tool.</p>
+      <div class="btns">
+        <button class="btn primary" data-go="1">पठनम् आरभताम् →</button>
+        <a class="btn" href="#/grammar">रूपतालिकाः · paradigm tables</a>
+        <button class="btn" data-go="xiii">पाठानुक्रमणिका</button>
+        <button class="btn" id="openSearchHome">🔍 अन्वेषणम्</button>
+      </div>
+    </div>
+  </section>
+
+  <nav id="shelf" class="shelf hidden"><span>Books:</span></nav>
+
+  <section class="dash" id="dash">
+    <a class="tile" href="#/review"><span class="tk">पुनरावृत्तिः · Review</span><b id="dDue">0</b><span id="dDueTxt">cards due today</span></a>
+    <a class="tile" href="#/progress"><span class="tk">प्रगतिः · Progress</span><b id="dStreak">0</b><span>day streak</span></a>
+    <a class="tile" href="#/grammar"><span class="tk">व्याकरणम् · Grammar</span><b id="dMet">0</b><span id="dMetTxt">tables met so far</span></a>
+    <a class="tile" href="#/notes"><span class="tk">टिप्पण्यः · Notebook</span><b id="dNotes">0</b><span>highlights &amp; notes</span></a>
+  </section>
+
+  <div id="resume" class="resume hidden">
+    <span>Last time you were reading <b id="resumeTxt"></b>.</span>
+    <button class="btn primary" id="resumeBtn">Continue →</button>
+  </div>
+
+  <div class="sec-title"><h2 class="sa">पाठानुक्रमणिका</h2><span id="pgCount"></span></div>
+  <div class="grid" id="grid"></div>
+
+  <footer>
+    Textbook content and images © NCERT (राष्ट्रीय शैक्षिक अनुसंधान और प्रशिक्षण परिषद्). This site only displays the book's pages for study. Original:
+    <a href="https://ncert.nic.in/textbook.php?fsde1=0-16" target="_blank" rel="noopener">ncert.nic.in</a>.
+    Your study data (cards, notes, answers) stays in this browser — back it up from Progress → Settings.
+    <span style="float:right"><button class="btn" id="themeBtn" style="padding:4px 12px">◐ Theme</button></span>
+  </footer>
+</main>
+
+<!-- ============ READER ============ -->
+<section id="reader" class="hidden" aria-label="Book reader">
+  <div class="bar">
+    <button class="ib" id="homeBtn" title="Home"><svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg></button>
+    <select id="chSel" aria-label="Chapter"></select>
+    <div class="pgbox"><input id="pgIn" inputmode="text" aria-label="Page number"><span class="of" id="pgOf"></span></div>
+    <span class="spacer"></span>
+    <button class="ib" id="studyBtn" title="Study panel (P)"><svg viewBox="0 0 24 24"><path d="M2 5h7a3 3 0 013 3v12a2 2 0 00-2-2H2z"/><path d="M22 5h-7a3 3 0 00-3 3v12a2 2 0 012-2h8z"/></svg><i class="badge hidden" id="studyBadge"></i></button>
+    <button class="ib" id="markBtn" title="Highlight / note / card tool (M)"><svg viewBox="0 0 24 24"><path d="M9 11l-6 6v3h3l6-6"/><path d="M22 6l-4-4-9 9 4 4z"/></svg></button>
+    <button class="ib hide-sm" id="spreadBtn" title="One / two pages (S)"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="8" height="16" rx="1"/><rect x="13" y="4" width="8" height="16" rx="1"/></svg></button>
+    <button class="ib hide-sm" id="zoomBtn" title="Zoom (Z)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5M11 8v6M8 11h6"/></svg></button>
+    <button class="ib" id="thumbBtn" title="All pages (T)"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></button>
+    <button class="ib" id="searchBtn" title="Search (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></button>
+    <button class="ib hide-sm" id="fsBtn" title="Full screen (F)"><svg viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+  </div>
+  <div id="markHint" class="markhint hidden">Drag over any part of the page to highlight it, add a note, or make a flashcard. <button class="lnk" id="markOff">Done</button></div>
+  <div id="stageWrap">
+    <div id="stage"><div id="spread" class="fit"></div></div>
+    <aside id="panel" class="hidden" aria-label="Study panel"></aside>
+  </div>
+  <button class="nav" id="prev" aria-label="Previous page"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="nav" id="next" aria-label="Next page"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  <div id="thumbs" class="drawer hidden"><div id="thumbStrip"></div></div>
+</section>
+
+<!-- ============ FULL-PAGE VIEWS (review, grammar, notebook, progress) ============ -->
+<section id="view" class="hidden">
+  <div class="vbar">
+    <button class="ib" id="vBack" title="Back"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <h2 id="vTitle" class="sa"></h2>
+    <span class="spacer"></span>
+    <nav class="vnav">
+      <a href="#/review">Review</a><a href="#/grammar">Grammar</a><a href="#/notes">Notebook</a><a href="#/progress">Progress</a>
+    </nav>
+  </div>
+  <div id="vBody"></div>
+</section>
+
+<aside id="searchP" class="drawer hidden" aria-label="Search">
+  <div class="dh">
+    <input id="q" type="search" placeholder="Type a word… (e.g. वृक्षाः or vRkShaaH)" autocomplete="off">
+    <button class="ib" id="closeSearch" title="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  </div>
+  <div id="results"><div class="hint">Search the whole book in Devanagari (or type in Roman: <code>aa ii uu M H</code>). Matching ignores small vowel-sign differences in the PDF text.</div></div>
+</aside>
+
+<div id="pop" class="pop hidden" role="dialog" aria-modal="false"></div>
+<div id="toast"></div>
+
+<script>window.BOOK={name:'व्याकरणवीथिः',tag:'संस्कृत व्याकरण (कक्षा 9–10)',ih:2122,cls:'V',pfx:'vy.',full:0,toc:'xiii',study:[],shelf:[{cls:6,href:'../'},{cls:7,href:'../class7/'},{cls:8,href:'../class8/'},{cls:9,href:'../class9/'},{cls:10,href:'../class10/'},{cls:'V',href:'./',lab:'व्याकरणम्'}]};</script>
+<script src="js/translit.js"></script>
+<script src="js/app.js"></script>
+<script src="js/study.js"></script>
+</body>
+</html>
